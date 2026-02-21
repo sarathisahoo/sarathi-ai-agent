@@ -132,7 +132,7 @@ When a transcript (command) reaches the background:
    - Background retrieves a fresh DOM snapshot and calls the LLM again.
    - This repeats up to **8 steps** or until the LLM returns `{"action": "done", ...}`.
 
-### Configuring API Keys & Provider
+### Configuring API Keys & Provider 
 
 1. Right-click the Sarathi AI extension icon → **Options**, or click **⚙ Settings** in the popup.
 2. In the **Provider** section:
