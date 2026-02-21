@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sarathi AI Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="options-root">
+      <header class="options-header">
+        <h1>Sarathi AI</h1>
+        <p>Configure your voice assistant and LLM provider.</p>
+      </header>
+
+      <main class="options-main">
+        <section>
+          <h2>Provider</h2>
+          <label class="field">
+            <span>Provider</span>
+            <select id="provider">
+              <option value="openai">OpenAI</option>
+              <option value="gemini">Gemini</option>
+              <option value="deepseek">DeepSeek</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>API Key</span>
+            <input type="password" id="apiKey" placeholder="sk-..." />
+          </label>
+
+          <label class="field">
+            <span>Model name</span>
+            <input type="text" id="model" placeholder="gpt-4.1-mini" />
+          </label>
+
+          <label class="field custom-only" id="baseUrl-field" style="display: none;">
+            <span>Base URL (for Custom / overrides)</span>
+            <input
+              type="text"
+              id="baseUrl"
+              placeholder="https://api.openai.com"
+            />
+          </label>
+
+          <label class="field custom-only" id="customHeaders-field" style="display: none;">
+            <span>Custom headers JSON (optional)</span>
+            <textarea
+              id="customHeaders"
+              rows="3"
+              placeholder='{"X-My-Header":"value"}'
+            ></textarea>
+          </label>
+        </section>
+
+        <section>
+          <h2>Voice & Safety</h2>
+
+          <label class="field">
+            <span>Wake word (e.g. \"hey nova\")</span>
+            <input
+              type="text"
+              id="wakeWord"
+              placeholder="hey nova"
+            />
+          </label>
+
+          <label class="field">
+            <span>Language</span>
+            <select id="language">
+              <option value="en-IN">English (India)</option>
+              <option value="hi-IN">Hindi (India)</option>
+              <option value="ta-IN">Tamil (India)</option>
+              <option value="te-IN">Telugu (India)</option>
+              <option value="en-US">English (US)</option>
+            </select>
+          </label>
+
+          <label class="field checkbox-field">
+            <input type="checkbox" id="requireConfirmation" checked />
+            <span>Require confirmation before potentially dangerous actions</span>
+          </label>
+        </section>
+      </main>
+
+      <footer class="options-footer">
+        <button id="btn-test" class="secondary-button">Test connection</button>
+        <button id="btn-save" class="primary-button">Save settings</button>
+      </footer>
+
+      <div id="status" class="status-text"></div>
+    </div>
+
+    <script src="utils/storage.js"></script>
+    <script src="utils/llmProviders.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
+
+

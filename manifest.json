@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Sarathi AI",
+  "description": "Sarathi AI is a voice-based browser AI agent that understands pages, plans actions, and controls the browser for you.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Sarathi AI",
+    "default_icon": {
+      "16": "icons/logo2.png",
+      "48": "icons/logo2.png",
+      "128": "icons/logo2.png"
+    }
+  },
+  "icons": {
+    "16": "icons/logo2.png",
+    "48": "icons/logo2.png",
+    "128": "icons/logo2.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "utils/domUtils.js",
+        "contentScript.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
+
+

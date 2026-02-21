@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.options-root {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 20px 22px 18px;
+  background: radial-gradient(circle at top left, #1f2937 0, #020617 55%);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 32px 60px rgba(0, 0, 0, 0.55);
+}
+
+.options-header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.options-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.options-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.options-main section h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.field span {
+  color: #d1d5db;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 8px;
+  border: 1px solid rgba(55, 65, 81, 0.95);
+  padding: 7px 8px;
+  font-size: 13px;
+  color: #f9fafb;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.6);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox-field {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.options-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.primary-button,
+.secondary-button {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 7px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #022c22;
+  box-shadow: 0 10px 20px rgba(22, 163, 74, 0.4);
+}
+
+.secondary-button {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.7);
+  color: #e5e7eb;
+}
+
+.primary-button:hover {
+  filter: brightness(1.05);
+}
+
+.secondary-button:hover {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.status-text {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+

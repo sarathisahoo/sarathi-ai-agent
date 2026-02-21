@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sarathi AI</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup-root">
+      <header class="popup-header">
+        <div class="title-group">
+          <img src="icons/logo.png" alt="Sarathi AI" class="logo-icon" />
+          <div class="title-text">
+            <div class="brand">Sarathi AI</div>
+            <div class="subtitle">Voice browser assistant</div>
+          </div>
+        </div>
+        <span class="status-pill" id="status-pill">Idle</span>
+      </header>
+
+      <main class="popup-main">
+        <div class="mic-warning" id="mic-warning" style="display: none;">
+          <div class="mic-warning-text">
+            Microphone permission required. Click Allow in the browser prompt.
+          </div>
+          <button id="btn-grant-permission" class="mini-button">
+            Grant permission
+          </button>
+        </div>
+
+        <section class="row space-between align-center language-row">
+          <div class="label-group">
+            <div class="label-title">Command language</div>
+            <div class="label-sub">For manual record no need to say wake word</div>
+          </div>
+          <select id="language-select" class="language-select">
+            <option value="en-IN">English (India)</option>
+            <option value="hi-IN">Hindi</option>
+            <option value="te-IN">Telugu</option>
+            <option value="ta-IN">Tamil</option>
+            <option value="kn-IN">Kannada</option>
+            <option value="ml-IN">Malayalam</option>
+            <option value="mr-IN">Marathi</option>
+            <option value="bn-IN">Bengali</option>
+            <option value="or-IN">Odia</option>
+            <option value="gu-IN">Gujarati</option>
+            <option value="pa-IN">Punjabi</option>
+            <option value="ur-IN">Urdu</option>
+          </select>
+        </section>
+
+        <section class="row space-between align-center">
+          <div class="label-group">
+            <div class="label-title">Always Listening</div>
+            <div class="label-sub">Wake word: “hey nova”</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="toggle-always-listening" />
+            <span class="slider round"></span>
+          </label>
+        </section>
+
+        <section class="record-section">
+          <button id="btn-record" class="primary-button">
+            <span class="icon">🎤</span>
+            <span>Record</span>
+          </button>
+        </section>
+
+        <section class="divider-section">
+          <div class="divider-text">OR</div>
+        </section>
+
+        <section class="text-input-section">
+          <textarea 
+            id="text-command-input" 
+            class="text-command-input" 
+            placeholder="Type your command here..."
+            rows="3"
+          ></textarea>
+          <div class="button-group">
+            <button id="btn-execute" class="primary-button execute-button">
+              <span class="icon">▶</span>
+              <span>Execute</span>
+            </button>
+            <button id="btn-stop" class="stop-button" style="display: none;">
+              <span class="icon">⏹</span>
+              <span>Stop</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="info-row">
+          <div class="info-block">
+            <div class="info-label">Last transcript</div>
+            <div class="info-box" id="last-transcript"></div>
+          </div>
+          <div class="info-block">
+            <div class="info-label">Last action</div>
+            <div class="info-box" id="last-action"></div>
+          </div>
+        </section>
+
+        <section class="info-row single-row">
+          <div class="info-block full-width">
+            <div class="info-label">Last LLM response</div>
+            <div class="info-box" id="last-llm-response"></div>
+          </div>
+        </section>
+
+        <section class="info-row single-row">
+          <div class="info-block full-width">
+            <div class="info-label">Executed Steps</div>
+            <div class="steps-list" id="steps-list"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="popup-footer">
+        <button id="btn-settings" class="ghost-button">⚙ Settings</button>
+      </footer>
+    </div>
+
+    <script src="utils/storage.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
+
