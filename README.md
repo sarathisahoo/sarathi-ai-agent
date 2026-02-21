@@ -1,6 +1,10 @@
 # Sarathi AI Agent
 ### DOM-Grounded AI Browser Agent
 
+## 🎥 Demo Video
+
+[![Sarathi AI Agent Demo](https://img.youtube.com/vi/5Voji994zYw/maxresdefault.jpg)](https://www.youtube.com/watch?v=5Voji994zYw)
+
 **Sarathi AI Agent** is an experimental Chrome extension that enables natural-language control of the browser. It converts user instructions into structured browser actions using a DOM-grounded reasoning loop instead of screenshot-based vision models.
 
 The system operates directly on structured DOM data, making it **faster, cheaper, and more deterministic** than screenshot-driven browser agents.
