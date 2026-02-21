@@ -1,3 +1,9 @@
+/*
+ Sarathi AI
+ Copyright (c) 2026 Sarathi Sabyasachi Sahoo
+ MIT License
+*/
+
 /* global fetch */
 
 // LLM provider abstraction for Sarathi AI.
