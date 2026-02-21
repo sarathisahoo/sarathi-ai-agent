@@ -1,3 +1,9 @@
+/*
+ Sarathi AI
+ Copyright (c) 2026 Sarathi Sabyasachi Sahoo
+ MIT License
+*/
+
 /* global chrome */
 
 // Simple wrapper around chrome.storage.sync for Sarathi AI settings.
